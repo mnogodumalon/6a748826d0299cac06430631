@@ -1,0 +1,26 @@
+Legend: `!` after a field name = required (from the app's base view) —
+a step form that writes such a field must not submit it empty.
+A lookup field lists its keys after the type (`[lookup/select: a|b|c]`);
+these are the ONLY valid write values — quote them into the brief verbatim,
+the matching labels come from LOOKUP_OPTIONS at runtime.
+`⚙` lists the service methods for that entity, spelled exactly.
+`✚` lists the entity's Enriched* fields and its enrich() signature,
+spelled exactly — quote both verbatim; an invented enriched field or
+a missing map is a guaranteed type error.
+
+Modules — copy these paths verbatim into a subagent brief:
+  @/types/app                            entity types, APP_IDS, LOOKUP_OPTIONS
+  @/services/livingAppsService           LivingAppsService, createRecordUrl, extractRecordId
+  @/hooks/useDashboardData               useDashboardData
+  @/lib/formatters                       lookupKey, formatDate
+  @/components/blocks/IntentWizardShell  IntentWizardShell
+  @/components/blocks/EntitySelectStep   EntitySelectStep
+  @/components/blocks/StatusBadge        StatusBadge, getStatusColor
+  @/components/blocks/BudgetTracker      BudgetTracker
+There is NO `@/types/enriched` — no entity here has an applookup to a sibling app, so no Enriched* type is generated.
+There is NO `@/config/appIds`, no `@/config/lookupOptions` and no
+`@/lib/urlUtils` — APP_IDS and LOOKUP_OPTIONS come from `@/types/app`,
+createRecordUrl from the service. Note the lowercase `l` in the service path.
+
+- Nightcore Playlists (nightcore_playlists): titel![string/text], beschreibung[string/textarea], playlist_url[string/url], cover_bild[file], genre_tags[multiplelookup/checkbox: nightcore_classic|nightcore_anime|nightcore_gaming|nightcore_pop|nightcore_rock|nightcore_edm|nightcore_metal|nightcore_chill|nightcore_remix], anzahl_songs[number], erstellt_am[date/date], plattform[lookup/select: youtube|spotify|soundcloud|apple_music|andere], bewertung[lookup/radio: stern_1|stern_2|stern_3|stern_4|stern_5], notizen[string/textarea], favorit[bool]
+  ⚙ getNightcorePlaylists() · getNightcorePlaylist(id) · createNightcorePlaylist(fields) · updateNightcorePlaylist(id, fields) · deleteNightcorePlaylist(id)

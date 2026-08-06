@@ -1,0 +1,10 @@
+{
+  "entities": {
+    "NightcorePlaylists": {
+      "placeholders_set": 10,
+      "defaults_keys": ["erstellt_am", "favorit"],
+      "computed_keys": [],
+      "reason": "Reine Stammdaten-Entity ohne berechenbare Größen. Kein Datumspaar (nur einzelnes Erstellungsdatum), keine Preise, keine Lookup-Ketten mit Preis-Zielen, keine Mengen-Produkte. erstellt_am erhält today-Default (Erfassungs-Semantik), favorit erhält true-Default (beim Anlegen wahrscheinlich favorisieren). numberFields: Bewertung max=5 (Sternen-Skala 1–5)."
+    }
+  }
+}

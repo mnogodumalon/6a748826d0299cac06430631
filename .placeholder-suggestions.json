@@ -1,0 +1,14 @@
+{
+  "NightcorePlaylistsDialog.tsx": {
+    "titel": "z. B. My Favorite Nightcore Mix",
+    "beschreibung": "Worum geht es in dieser Playlist?",
+    "playlist_url": "z. B. https://youtube.com/...",
+    "anzahl_songs": "z. B. 42",
+    "erstellt_am": "Wann wurde die Playlist erstellt?",
+    "notizen": "Besonderheiten, Lieblingstracks, Stimmung...",
+    "genre_tags": "Wähle passende Genres",
+    "plattform": "Wo läuft die Playlist?",
+    "bewertung": "Wie gut gefällt dir die Playlist?",
+    "favorit": "Als Favorit markieren"
+  }
+}
